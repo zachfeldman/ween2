@@ -1,0 +1,56 @@
+$tablet: 37.5rem;
+
+@mixin breakpoint($val) {
+	@media screen and (min-width: $val) {
+		@content;
+	}
+}
+
+$body-stack: "Rokkitt", serif;
+$headline-stack: "Changa One", cursive;
+
+html, body {
+	color: white;
+	font-family: $body-stack;
+	height: 100%;
+	background-image: image-url('bg/mile.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+
+	text-align: center;
+	min-width: 20rem;
+}
+
+h1 {
+	font-family: $headline-stack;
+}
+
+h1, h2, h3 {
+	display: block;
+	margin: 0.25em auto 0.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.75em;
+}
+
+li {
+	font-size: 1.25em;
+}
+
+.weenRow-outer {
+	height: 100%;
+}
+
+.icon-downArrow {
+	display: inline-block;
+	background-image: image-url('icon/downArrow.png');
+	background-image: image-url('icon/downArrow.svg'), none;
+	height: image-height('icon/downArrow.png');
+	width: image-width('icon/downArrow.png');
+}

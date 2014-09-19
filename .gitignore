@@ -1,0 +1,4 @@
+resources/.sass-cache
+resources/stylesheets
+Gemfile.lock
+.DS_Store
