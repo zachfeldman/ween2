@@ -1,3 +1,12 @@
+%button-bg {
+	cursor: pointer;
+	border: 0;
+	background: #FFF;
+	&:hover { background: rgba(#FFF,.85); }
+	&:active { background: rgba(#FFF,.7); }
+	@include transition(background, .2s ease);
+}
+
 $tablet: 37.5rem;
 
 @mixin breakpoint($val) {
@@ -22,6 +31,21 @@ html, body {
 	min-width: 20rem;
 }
 
+.button {
+	@extend %button-bg;
+	color: #222 !important;
+	display: inline-block;
+	font-size: 1.25em;
+	line-height: 1em;
+	margin: 0.25em auto 0.5em;
+	min-width: 6em;
+	padding: 0.5em 1em;
+	text-decoration: none !important;
+	@include breakpoint($tablet) {
+		font-size: 2em;
+	}
+}
+
 h1 {
 	font-family: $headline-stack;
 }
@@ -31,20 +55,24 @@ h1, h2, h3 {
 	margin: 0.25em auto 0.5em;
 }
 
-h2 {
-	font-size: 2em;
-}
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+li { font-size: 1.25em; }
 
-h3 {
-	font-size: 1.75em;
-}
-
-li {
-	font-size: 1.25em;
+@include breakpoint($tablet) {
+	h2 { font-size: 3em; }
+	h3 { font-size: 2.75em; }
+	li { font-size: 2.25em; }
 }
 
 .weenRow-outer {
 	height: 100%;
+}
+
+.weenRow-inner,
+%marginOffset {
+	> *:first-child { margin-top: 0 !important; }
+	> *:last-child { margin-bottom: 0 !important; }
 }
 
 .icon-downArrow {
@@ -54,3 +82,21 @@ li {
 	height: image-height('icon/downArrow.png');
 	width: image-width('icon/downArrow.png');
 }
+
+.vertCenter-parent:before {
+	content: " ";
+	height: 100%;
+	width: 1em;
+	margin-left: -0.75em;
+	margin-right: -0.75em;
+}
+	
+	.vertCenter-parent:before,
+	.vertCenter {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.vertCenter {
+		@extend %marginOffset;
+	}

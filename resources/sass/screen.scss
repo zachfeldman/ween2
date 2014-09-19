@@ -1,5 +1,9 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+
 @import "./base/_reset";
 @import "./base/_base";
+@import "./base/_animate";
 
 @import "./modules/_splash";
 @import "./modules/_info";

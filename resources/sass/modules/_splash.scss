@@ -18,14 +18,9 @@
 	}
 
 	.splash-scrollButton {
-		background: rgba(0,0,0,.6);
-		cursor: pointer;
+		@extend %button-bg;
 		border-radius: 5em;
-		border: 0;
 		padding: 1.5em 1em 1em;
-
-		&:hover { background: rgba(0,0,0,.8); }
-		&:active { background: #000; }
 	}
 
 	.splash-buttonWrapper {
