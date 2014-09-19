@@ -33,6 +33,7 @@ html, body {
 
 .button {
 	@extend %button-bg;
+	font-family: $body-stack;
 	color: #222 !important;
 	display: inline-block;
 	font-size: 1.25em;
@@ -75,6 +76,10 @@ li { font-size: 1.25em; }
 	> *:last-child { margin-bottom: 0 !important; }
 }
 
+.weenRow-inner ul li{
+	padding-bottom: 10px;
+}
+
 .icon-downArrow {
 	display: inline-block;
 	background-image: image-url('icon/downArrow.png');
@@ -100,3 +105,28 @@ li { font-size: 1.25em; }
 	.vertCenter {
 		@extend %marginOffset;
 	}
+
+
+.fieldGroup{
+  margin-bottom: 10px;
+
+  input[type='text']{
+    font-size: 18px;
+    padding: 8px;
+    background-color: transparent;
+    color: orange;
+    border: 0;
+    border: 1px solid white;
+    font-weight: 100;
+  }
+
+  input[type='text']:focus{
+    outline: 0;
+  }
+
+  label{
+    font-size: 22px;
+    margin-right: 10px;
+  }
+
+}
