@@ -592,6 +592,17 @@ a:hover {
   color: aqua;
 }
 
+@media (max-width: 400px) {
+  /* line 66, ../sass/modules/_splash.scss */
+  .one {
+    display: none;
+  }
+
+  /* line 69, ../sass/modules/_splash.scss */
+  .three {
+    display: none;
+  }
+}
 /* line 1, ../sass/modules/_info.scss */
 .section-info {
   background-color: rgba(0, 0, 0, 0.8);

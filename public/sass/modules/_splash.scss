@@ -61,3 +61,12 @@ a, a:visited, a:link, a:active{
 a:hover{
 	color: aqua;
 }
+
+@media (max-width: 400px){
+	.one{
+		display: none;
+	}
+	.three{
+		display: none;
+	}
+}
