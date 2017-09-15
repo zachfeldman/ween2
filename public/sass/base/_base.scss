@@ -1,7 +1,7 @@
 %button-bg {
 	cursor: pointer;
 	border: 0;
-	background: #FFF;
+	background: #FF5F01;
 	&:hover { background: rgba(#FFF,.85); }
 	&:active { background: rgba(#FFF,.7); }
 	@include transition(background, .2s ease);
@@ -15,14 +15,14 @@ $tablet: 37.5rem;
 	}
 }
 
-$body-stack: "Rokkitt", serif;
-$headline-stack: "Changa One", cursive;
+$body-stack: 'Fira Sans', sans-serif;
+$headline-stack: 'Michroma', sans-serif;
 
 html, body {
 	color: white;
 	font-family: $body-stack;
 	height: 100%;
-	background-image: image-url('bg/mile.jpg');
+	background-image: image-url('BBBmoon.png');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
@@ -95,7 +95,7 @@ li { font-size: 1.25em; }
 	margin-left: -0.75em;
 	margin-right: -0.75em;
 }
-	
+
 	.vertCenter-parent:before,
 	.vertCenter {
 		display: inline-block;

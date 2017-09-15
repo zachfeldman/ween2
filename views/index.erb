@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>a halloween party</title>
+		<title>Big Bad Boogie</title>
 		<meta name="description" content="you should come">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -18,10 +18,13 @@
 		<![endif]-->
 
 		<!-- Add your site or application content here -->
-		
+
 		<section class="weenRow-outer section-splash">
 			<div class="weenRow-inner splash-rowContents">
-				<h1 class="splash-headline">a halloween party</h1>
+				<h1 class="splash-headline"><span class='orange'>Big</span> Bad <span class='orange'>Boogie</span></h1>
+				<img src="images/tombstone1.png" class='tombstone one'/>
+				<img src="images/tombstone2.png" class='tombstone two'/>
+				<img src="images/tombstone3.png" class='tombstone three'/>
 				<div class="splash-buttonWrapper">
 					<button class="splash-scrollButton">
 						<abbr class="icon-downArrow"></abbr>
@@ -34,15 +37,17 @@
 			<div class="weenRow-inner info-rowContents vertCenter-parent">
 
 				<div class="info-contents vertCenter">
-					<h2>Friday, October 31st, 8pm</h2>
+					<h2>Saturday, October 28th, 9pm</h2>
 					<ul>
-						<li>Bobbing for Apples</li>
-						<li>Pumpkin Carving</li>
+						<li>$4 beers, $6 beer + shots all night</li>
+						<li>Music by <a href="https://djmuzach.com">DJ MuZach</a></li>
 						<li>Costume Contest</li>
 						<li>Drinks + Dancing</li>
 					</ul>
-					<h3>@ A Rooftop in Bushwick</h3>
-					<form action="https://docs.google.com/forms/d/1bSoBmvIGP59xlEZqBH2Lt_VoCNT5Ygne3DPs8yn2M_4/formResponse" method="GET">
+					<h3>@ Franklin820</h3>
+					<h5>$5 suggested donation, some drink proceeds donated to the American Cancer Society</h5>
+					<br>
+					<form action="https://docs.google.com/forms/d/e/1FAIpQLSe6wrTeVTGzF33ZW5hmsTOjKcY3CeuLeb1gtGmvfMiCrmpFzg/formResponse" method="GET">
 						<div class="fieldGroup">
 							<label for="entry.284194908">Name</label>
 							<input type="text" name="entry.284194908">
@@ -111,11 +116,20 @@
 				      data: $("form").serializeArray(),
 				      cache       : false,
        				dataType    : 'jsonp',
-				      complete    : function(data){
+				      done   : function(data){
+								console.log('test')
 				      	$(".button.rsvp").attr("disabled", "true").css("background-color", "#FFF")
 				      	$(".button").attr("value", "BOO!")
-				      }
+				      },
+							error  : function(test){
+								console.log(test)
+								console.log('hi')
+							}
 				    });
+						setTimeout(function(){
+							$(".button.rsvp").attr("disabled", "true").css("background-color", "#FFF")
+							$(".button").attr("value", "BOO!")
+						},3000)
 				  }else{
 				    // $(".subscriber-email").attr('placeholder', 'Enter your email.')
 				    // $(".subscriber-email").removeAttr("disabled").css("background-color", "white").css("border", "")

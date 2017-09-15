@@ -27,3 +27,9 @@ DEPENDENCIES
   compass-import-once
   sass (= 3.2.19)
   sinatra
+
+RUBY VERSION
+   ruby 2.2.3p173
+
+BUNDLED WITH
+   1.15.4

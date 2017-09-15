@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans|Michroma");
 /*
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
@@ -33,7 +34,7 @@ html {
   box-sizing: border-box;
 }
 
-/* line 35, ../sass/base/_reset.scss */
+/* line 33, ../sass/base/_reset.scss */
 *,
 *:before,
 *:after {
@@ -44,7 +45,7 @@ html {
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
-/* line 46, ../sass/base/_reset.scss */
+/* line 44, ../sass/base/_reset.scss */
 img,
 object,
 embed {
@@ -69,7 +70,7 @@ blockquote, q {
   quotes: none;
 }
 
-/* line 60, ../sass/base/_reset.scss */
+/* line 57, ../sass/base/_reset.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -215,7 +216,7 @@ pre, code, kbd, samp {
 }
 
 /* hand cursor on clickable elements */
-/* line 113, ../sass/base/_reset.scss */
+/* line 108, ../sass/base/_reset.scss */
 .clickable,
 label,
 input[type=button],
@@ -232,7 +233,7 @@ button, input, select, textarea {
 }
 
 /* make buttons play nice in IE */
-/* line 120, ../sass/base/_reset.scss */
+/* line 119, ../sass/base/_reset.scss */
 button,
 input[type=button] {
   width: auto;
@@ -272,11 +273,11 @@ input[type=button] {
 .button, .splash-scrollButton {
   cursor: pointer;
   border: 0;
-  background: #FFF;
-  -webkit-transition: background, 0.2s ease;
-  -moz-transition: background, 0.2s ease;
-  -o-transition: background, 0.2s ease;
-  transition: background, 0.2s ease;
+  background: #FF5F01;
+  -moz-transition: background, ease 0.2s;
+  -o-transition: background, ease 0.2s;
+  -webkit-transition: background, ease 0.2s;
+  transition: background, ease 0.2s;
 }
 /* line 5, ../sass/base/_base.scss */
 .button:hover, .splash-scrollButton:hover {
@@ -290,9 +291,9 @@ input[type=button] {
 /* line 21, ../sass/base/_base.scss */
 html, body {
   color: white;
-  font-family: "Rokkitt", serif;
+  font-family: "Fira Sans", sans-serif;
   height: 100%;
-  background-image: url('/images/bg/mile.jpg?1411136572');
+  background-image: url('/images/BBBmoon.png?1505488215');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -302,7 +303,7 @@ html, body {
 
 /* line 34, ../sass/base/_base.scss */
 .button {
-  font-family: "Rokkitt", serif;
+  font-family: "Fira Sans", sans-serif;
   color: #222 !important;
   display: inline-block;
   font-size: 1.25em;
@@ -321,7 +322,7 @@ html, body {
 
 /* line 50, ../sass/base/_base.scss */
 h1 {
-  font-family: "Changa One", cursive;
+  font-family: "Michroma", sans-serif;
 }
 
 /* line 54, ../sass/base/_base.scss */
@@ -385,8 +386,8 @@ li {
 /* line 83, ../sass/base/_base.scss */
 .icon-downArrow {
   display: inline-block;
-  background-image: url('/images/icon/downArrow.png?1411136572');
-  background-image: url('/images/icon/downArrow.svg?1411136572'), none;
+  background-image: url('/images/icon/downArrow.png?1505485496');
+  background-image: url('/images/icon/downArrow.svg?1505485496'), none;
   height: 24px;
   width: 30px;
 }
@@ -400,7 +401,7 @@ li {
   margin-right: -0.75em;
 }
 
-/* line 100, ../sass/base/_base.scss */
+/* line 99, ../sass/base/_base.scss */
 .vertCenter-parent:before,
 .vertCenter {
   display: inline-block;
@@ -432,93 +433,69 @@ li {
 }
 
 @-webkit-keyframes fadeInUp {
-  /* line 2, ../sass/base/_animate.scss */
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-
-  /* line 7, ../sass/base/_animate.scss */
   100% {
     opacity: 1;
-    -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
-    -o-transform: none;
+    -webkit-transform: none;
     transform: none;
   }
 }
-
 @-moz-keyframes fadeInUp {
-  /* line 13, ../sass/base/_animate.scss */
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-
-  /* line 18, ../sass/base/_animate.scss */
   100% {
     opacity: 1;
-    -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
-    -o-transform: none;
+    -webkit-transform: none;
     transform: none;
   }
 }
-
 @-o-keyframes fadeInUp {
-  /* line 24, ../sass/base/_animate.scss */
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-
-  /* line 29, ../sass/base/_animate.scss */
   100% {
     opacity: 1;
-    -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
-    -o-transform: none;
+    -webkit-transform: none;
     transform: none;
   }
 }
-
 @keyframes fadeInUp {
-  /* line 35, ../sass/base/_animate.scss */
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
-
-  /* line 40, ../sass/base/_animate.scss */
   100% {
     opacity: 1;
-    -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
-    -o-transform: none;
+    -webkit-transform: none;
     transform: none;
   }
 }
-
 /* line 46, ../sass/base/_animate.scss */
 .fadeInUp {
   -webkit-animation: fadeInUp 5s infinite;
@@ -552,7 +529,7 @@ li {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 2em;
+  top: 0.5em;
   width: 100%;
 }
 @media screen and (min-width: 37.5rem) {
@@ -572,9 +549,47 @@ li {
 .splash-buttonWrapper {
   display: block;
   position: absolute;
-  bottom: 1em;
+  bottom: 3.5em;
   width: 100%;
   left: 0;
+}
+
+/* line 34, ../sass/modules/_splash.scss */
+.orange {
+  color: #FF5F01;
+}
+
+/* line 38, ../sass/modules/_splash.scss */
+.tombstone {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 44, ../sass/modules/_splash.scss */
+.one {
+  left: 20%;
+}
+
+/* line 48, ../sass/modules/_splash.scss */
+.two {
+  margin-left: -110px;
+}
+
+/* line 52, ../sass/modules/_splash.scss */
+.three {
+  right: 20%;
+}
+
+/* line 56, ../sass/modules/_splash.scss */
+a, a:visited, a:link, a:active {
+  text-decoration: none;
+  color: #FF5F01;
+}
+
+/* line 61, ../sass/modules/_splash.scss */
+a:hover {
+  color: aqua;
 }
 
 /* line 1, ../sass/modules/_info.scss */
