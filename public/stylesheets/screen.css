@@ -3,11 +3,11 @@
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
 	We have learned much from/been inspired by/taken code where offered from:
-	
+
 	Eric Meyer					:: http://meyerweb.com
 	HTML5 Doctor				:: http://html5doctor.com
 	and the HTML5 Boilerplate	:: http://html5boilerplate.com
-	
+
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
@@ -27,7 +27,7 @@ article, aside, figure, footer, header, nav, section, details, summary {
   display: block;
 }
 
-/* Handle box-sizing while better addressing child elements: 
+/* Handle box-sizing while better addressing child elements:
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 /* line 29, ../sass/base/_reset.scss */
 html {
@@ -58,7 +58,7 @@ html {
   overflow-y: scroll;
 }
 
-/* we use a lot of ULs that aren't bulleted. 
+/* we use a lot of ULs that aren't bulleted.
 	don't forget to restore the bullets within content. */
 /* line 53, ../sass/base/_reset.scss */
 ul {
@@ -246,7 +246,7 @@ input[type=button] {
   -ms-interpolation-mode: bicubic;
 }
 
-/* prevent BG image flicker upon hover 
+/* prevent BG image flicker upon hover
    (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
@@ -362,6 +362,29 @@ li {
     font-size: 2.25em;
   }
 }
+
+.going{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 17em;
+  width: 100%;
+  opacity: 0;
+}
+
+
+.going.isActive{
+  opacity: 1;
+  transition: all ease-out 3s;
+}
+
+
+@media (min-width: 760px) {
+  .going{
+    top: 10em;
+  }
+}
+
 /* line 69, ../sass/base/_base.scss */
 .weenRow-outer {
   height: 100%;

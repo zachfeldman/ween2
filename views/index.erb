@@ -11,6 +11,15 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Changa+One' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="stylesheets/screen.css">
+		<!-- Load Stripe.js on your website. -->
+		<script src="https://js.stripe.com/v3"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				if(window.location.pathname == '/success'){
+					document.getElementsByClassName('going')[0].classList.add('isActive')
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -21,7 +30,11 @@
 
 		<section class="weenRow-outer section-splash">
 			<div class="weenRow-inner splash-rowContents">
-				<h1 class="splash-headline"><span class='orange'>Big</span> Bad <span class='orange'>Boogie</span></h1>
+				<h1 class="splash-headline"><span class='orange'>Big</kspan> Bad <span class='orange'>Boogie</span></h1>
+				<div class='going'>
+					<h3>You're going.</h3>
+					<p>Bring your emailed receipt or your ID for entry!</p>
+				</div>
 				<img src="images/tombstone1.png" class='tombstone one'/>
 				<img src="images/tombstone2.png" class='tombstone two'/>
 				<img src="images/tombstone3.png" class='tombstone three'/>
@@ -42,10 +55,55 @@
 						<li>$25 ($20 pre-sale) ticket</li>
 						<li>Music by <a href="https://djmuzach.com">DJ MuZach</a></li>
 						<li>Costume Contest</li>
-						<li>Drinks + Dancing</li>
+						<li>Dancing</li>
+						<li>Tons of Candy</li>
 					</ul>
 					<h3>@ <a href="https://craftsmanave.com/v2/" target="_new">Craftsman Ave<a></h3>
 					<br>
+					<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+					<button
+					  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+					  id="checkout-button-sku_FnsdEbZD4VruHX"
+					  role="link"
+					>
+					  Snag that ticket!
+					</button>
+
+					<script>
+						var domain = 'bigbadboogie.party' //production
+					  var stripe = Stripe('pk_live_PFBMqjvnjzQmrkenbEWoziQR00Xe6DW6pH'); //production
+
+						// var domain = 'localhost:4567' //development
+					 //  var stripe = Stripe('pk_test_oaKPliaWvdPLtqIvWzwv9JNW00wOmVEM0R') //development
+
+					  var checkoutButton = document.getElementById('checkout-button-sku_FnsdEbZD4VruHX');
+					  checkoutButton.addEventListener('click', function () {
+					    // When the customer clicks on the button, redirect
+					    // them to Checkout.
+					    stripe.redirectToCheckout({
+					      items: [{sku: 'sku_FnsdEbZD4VruHX', quantity: 1}], //production
+					      // items: [{sku: 'sku_FnssGav50QZBbx', quantity: 1}], //development
+
+					      // Do not rely on the redirect to the successUrl for fulfilling
+					      // purchases, customers may not always reach the success_url after
+					      // a successful payment.
+					      // Instead use one of the strategies described in
+					      // https://stripe.com/docs/payments/checkout/fulfillment
+					      successUrl: window.location.protocol + '//'+domain+'/success',
+					      cancelUrl: window.location.protocol + '//'+domain+'/',
+					    })
+					    .then(function (result) {
+					      if (result.error) {
+					        // If `redirectToCheckout` fails due to a browser or network
+					        // error, display the localized error message to your customer.
+					        var displayError = document.getElementById('error-message');
+					        displayError.textContent = result.error.message;
+					      }
+					    });
+					  });
+					</script>
+
+					<div id="error-message"></div>
 				</div>
 			</div>
 		</section>
