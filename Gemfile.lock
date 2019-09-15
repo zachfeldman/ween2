@@ -12,6 +12,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    rack-ssl-enforcer (0.2.9)
     sass (3.2.19)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -25,6 +26,7 @@ PLATFORMS
 DEPENDENCIES
   compass (= 0.12.6)
   compass-import-once
+  rack-ssl-enforcer
   sass (= 3.2.19)
   sinatra
 

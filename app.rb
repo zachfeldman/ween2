@@ -1,5 +1,10 @@
 require 'sinatra'
 
+require 'rack/ssl-enforcer'
+
+use Rack::SslEnforcer if production?
+
+
 get '/' do
   erb :index
 end
@@ -11,3 +16,4 @@ end
 get '/canceled' do
   erb :index
 end
+
