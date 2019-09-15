@@ -70,19 +70,19 @@
 					</button>
 
 					<script>
-						// var domain = 'bigbadboogie.party' //production
-					  // var stripe = Stripe('pk_live_PFBMqjvnjzQmrkenbEWoziQR00Xe6DW6pH'); //production
+						var domain = 'bigbadboogie.party' //production
+					  var stripe = Stripe('pk_live_PFBMqjvnjzQmrkenbEWoziQR00Xe6DW6pH'); //production
 
-						var domain = 'localhost:4567' //development
-					  var stripe = Stripe('pk_test_oaKPliaWvdPLtqIvWzwv9JNW00wOmVEM0R') //development
+						// var domain = 'localhost:4567' //development
+					 //  var stripe = Stripe('pk_test_oaKPliaWvdPLtqIvWzwv9JNW00wOmVEM0R') //development
 
 					  var checkoutButton = document.getElementById('checkout-button-sku_FnsdEbZD4VruHX');
 					  checkoutButton.addEventListener('click', function () {
 					    // When the customer clicks on the button, redirect
 					    // them to Checkout.
 					    stripe.redirectToCheckout({
-					      // items: [{sku: 'sku_FnsdEbZD4VruHX', quantity: 1}],
-					      items: [{sku: 'sku_FnssGav50QZBbx', quantity: 1}],
+					      items: [{sku: 'sku_FnsdEbZD4VruHX', quantity: 1}], //production
+					      // items: [{sku: 'sku_FnssGav50QZBbx', quantity: 1}], // development
 
 					      // Do not rely on the redirect to the successUrl for fulfilling
 					      // purchases, customers may not always reach the success_url after
